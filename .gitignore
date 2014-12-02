@@ -1,0 +1,9 @@
+﻿#Eclipse
+.metadata
+version.ini
+.lock
+.plugins
+.mylyn
+contexts
+repositories.xml.zip
+tasks.xml.zip

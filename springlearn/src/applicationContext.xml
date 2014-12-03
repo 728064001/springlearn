@@ -13,8 +13,45 @@
 	</bean>
 	
 	<bean id="car2" class="com.haolei.spring.Car">
-		<constructor-arg value="Audi" type="java.lang.String"></constructor-arg>
-		<constructor-arg value="shanghai" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="BMW" type="java.lang.String"></constructor-arg>
+		<constructor-arg type="java.lang.String">
+			<value><![CDATA[<USA>]]></value>
+		</constructor-arg>
 		<constructor-arg value="350" type="int"></constructor-arg>
 	</bean>
+	
+	<!-- 
+	<bean id="person" class="com.haolei.spring.Person">
+		<property name="name" value="haolei"></property>
+		<property name="age" value="23"></property>
+		<property name="car" ref="car2"></property>
+	</bean>
+	-->
+	<!-- 
+	<bean id="person" class="com.haolei.spring.Person">
+		<constructor-arg value="haolei"></constructor-arg>
+		<constructor-arg value="23"></constructor-arg>
+		<constructor-arg>
+			<bean class="com.haolei.spring.Car">
+				<constructor-arg value="benz"></constructor-arg>
+				<constructor-arg value="benz"></constructor-arg>
+				<constructor-arg value="3000000" type="double"></constructor-arg>
+			</bean>
+		</constructor-arg>
+	  
+		 
+	</bean>
+	--> 
+	 <!-- 给car对象赋值为NULL
+		<constructor-arg><null/></constructor-arg>
+		 -->
+		 
+	<!-- 如下，为级联属性赋值  对象属性需要先初始化才能被级联赋值 -->
+	<bean id="person" class="com.haolei.spring.Person">
+		<constructor-arg value="haolei"></constructor-arg>
+		<constructor-arg value="23"></constructor-arg>
+		<constructor-arg ref="car2"></constructor-arg>
+		<property name="car.price" value="3500000"></property>
+	</bean> 
+	
 </beans>

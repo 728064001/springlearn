@@ -10,7 +10,7 @@ public class Main {
 		//1.创建 Spring IOC 容器对象
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
 		//2.从IOC容器中获取Bean实例
-		HelloWorld hw = (HelloWorld)ctx.getBean("hw");
-		hw.say();
+//		HelloWorld hw = (HelloWorld)ctx.getBean("hw");
+//		hw.say();
 	}
 }

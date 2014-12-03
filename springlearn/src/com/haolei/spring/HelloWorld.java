@@ -14,4 +14,8 @@ public class HelloWorld {
 	public void say(){
 		System.out.println(name + " helloworld");
 	}
+	
+	public HelloWorld(){
+		System.out.println("method");
+	}
 }

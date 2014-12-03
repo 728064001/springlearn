@@ -5,4 +5,16 @@
 	<bean id="hw" class="com.haolei.spring.HelloWorld">
 		<property name="name2" value="haolei"></property>
 	</bean>	
+	
+	<bean id="car" class="com.haolei.spring.Car">
+		<constructor-arg value="Audi"></constructor-arg>
+		<constructor-arg value="shanghai"></constructor-arg>
+		<constructor-arg value="300000"></constructor-arg>
+	</bean>
+	
+	<bean id="car2" class="com.haolei.spring.Car">
+		<constructor-arg value="Audi" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="shanghai" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="350" type="int"></constructor-arg>
+	</bean>
 </beans>

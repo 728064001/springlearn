@@ -25,6 +25,11 @@ public class Person {
 	public void setCar(List car) {
 		this.car = car;
 	}
+	
+	public Person() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public Person(String name, int age, List car) {
 		super();
 		this.name = name;

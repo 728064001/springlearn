@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+<!-- 关系： 继承  依赖 -->
+
+<!-- 
+	<bean id="address1" class="com.haolei.autowire.Address" p:city="hubei" p:street="jingshan"></bean>
+	<bean id="address2" class="com.haolei.autowire.Address" p:city="guangdong" p:street="luogang"></bean>
+ -->	
+	<!-- come on  继承一下  看如下关键字 “parent”  可以覆盖父bean的属性哦-->
+	<!-- 
+	<bean id="address1" class="com.haolei.autowire.Address" p:city="hubei" p:street="jingshan"></bean>
+	<bean id="address2" p:street="shilong" parent="address1"></bean> -->
+	
+	<!-- 配置为一个模板，不能被容器实例化，它就是用来继承的。 -->
+	<bean id="address1" class="com.haolei.autowire.Address" p:city="hubei" p:street="jingshan" abstract="true"></bean>
+	<bean id="address2" p:street="shilong" parent="address1"></bean>
+
+	<!-- bean的依赖关系  -->
+	<!-- 指定配置当前的bean时，必须依赖于别外一个bean (必须要有另外一个bean存在)-->
+	<bean id="person" class="com.haolei.autowire.Person" p:name="Rose" p:address-ref="address2" p:car-ref="car"  depends-on="car"></bean>
+	<bean id="car" class="com.haolei.autowire.Car" p:brand="bmw" p:price="3500000"></bean>
+
+</beans>

@@ -11,6 +11,9 @@
 		<config>src/autowire.xml</config>
 		<config>src/relation.xml</config>
 		<config>src/scope.xml</config>
+		<config>src/properties.xml</config>
+		<config>src/spel.xml</config>
+		<config>src/cycle.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

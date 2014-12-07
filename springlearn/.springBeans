@@ -14,6 +14,7 @@
 		<config>src/properties.xml</config>
 		<config>src/spel.xml</config>
 		<config>src/cycle.xml</config>
+		<config>src/factory.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

@@ -15,6 +15,7 @@
 		<config>src/spel.xml</config>
 		<config>src/cycle.xml</config>
 		<config>src/factory.xml</config>
+		<config>src/beans-annotations.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

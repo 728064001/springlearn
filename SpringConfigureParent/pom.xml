@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+   <modules>
+   <!-- <modules>聚合配置 -->
+  	<module>../SpringProperty</module>
+  	<module>../SpringConstructor</module>
+  	<module>../SpringSpecialCharacters</module>
+  </modules>  
+  <groupId>com.haolei.project</groupId>
+  <artifactId>SpringConfigureParent</artifactId>
+  <version>snapshot v1.0.0</version>
+  <packaging>pom</packaging>
+  <name>SpringConfigureParent</name>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+   <url>http://maven.apache.org</url>
+   	<dependencyManagement>
+   	<!-- 依赖管理器 -->
+	  <dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>4.1.0.RELEASE</version>
+		</dependency>
+	  	<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>4.1.0.RELEASE</version>
+		</dependency>
+	  	<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>4.1.0.RELEASE</version>
+		</dependency>
+	  	
+	    <dependency>
+	      <groupId>junit</groupId>
+	      <artifactId>junit</artifactId>
+	      <version>4.10</version>
+	      <scope>test</scope>
+	    </dependency>
+	  </dependencies>  
+	 </dependencyManagement> 	
+</project>

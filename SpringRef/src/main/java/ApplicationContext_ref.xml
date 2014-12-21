@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--  可以改用为p命名空间
+	<bean id="b" class="com.haolei.spring.project.Bank">
+		<constructor-arg value="ICBC"></constructor-arg>
+		<constructor-arg value="2012-1-1"></constructor-arg>
+		<constructor-arg value="30000000.00"></constructor-arg>
+	</bean>
+ -->	
+ 	<bean id="b"  class="com.haolei.spring.project.Bank"  p:bankName="ICBC"  p:createDate="2013-5-1"  p:balance="4560000000.00" ></bean>
+	<bean id="p" class="com.haolei.spring.project.Preson">
+		<constructor-arg value="haolei"></constructor-arg>
+		<constructor-arg value="DBA"></constructor-arg>
+		<constructor-arg value="23"></constructor-arg>
+		<constructor-arg>
+			<ref bean="b"/>
+		</constructor-arg>
+	</bean>
+</beans>

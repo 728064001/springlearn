@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+      <!-- <parent>继承于SpringConfigureParent中的pom.xml配置 -->
+	  <groupId>com.haolei.project</groupId>
+	  <artifactId>SpringConfigureParent</artifactId>
+	  <version>snapshot v1.0.0</version>
+	  <relativePath>../SpringConfigureParent/pom.xml</relativePath>
+  </parent>
+  
+  <groupId>com.haolei.spring.project</groupId>
+  <artifactId>SpringRef</artifactId>
+  <packaging>jar</packaging>
+
+  <name>SpringRef</name>
+
+
+  <dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+	  	<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+		</dependency>
+	  	<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+		</dependency>   
+  </dependencies>
+</project>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-4.1.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.1.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+
+	<bean id="car1" class="com.haolei.spring.project.Car">
+		<constructor-arg value="bmw"></constructor-arg>
+		<constructor-arg value="USA"></constructor-arg>
+		<constructor-arg value="4500000.00"></constructor-arg>
+		<constructor-arg value="350"></constructor-arg>
+	</bean>
+	<bean id="car2" class="com.haolei.spring.project.Car">
+		<constructor-arg value="ford"></constructor-arg>
+		<constructor-arg value="CHINA"></constructor-arg>
+		<constructor-arg value="350000.00"></constructor-arg>
+		<constructor-arg value="250"></constructor-arg>		
+	</bean>
+	<bean id="car3" class="com.haolei.spring.project.Car">
+		<constructor-arg value="TOYOT"></constructor-arg>
+		<constructor-arg value="JANPA"></constructor-arg>
+		<constructor-arg value="200000.00"></constructor-arg>
+		<constructor-arg value="300"></constructor-arg>		
+	</bean>
+	
+	<util:list id="cars">
+		<ref bean="car1"></ref>
+		<ref bean="car2"></ref>
+		<ref bean="car3"></ref>
+	</util:list>
+	
+	<bean id="bank" class="com.haolei.spring.project.Bank">
+		<constructor-arg value="ICBC"></constructor-arg>
+		<constructor-arg value="2012-1-1"></constructor-arg>
+		<constructor-arg value="30000000.00"></constructor-arg>	
+	</bean>
+	<bean id="person2" class="com.haolei.spring.project.Preson2">
+		<property name="username" value="haolei"></property>
+		<property name="work" value="DBA"></property>
+		<property name="age" value="23"></property>
+		<property name="bank">
+			<ref bean="bank"/>
+		</property>
+		<property name="cars">
+			<ref bean="cars"/>
+		</property>
+	</bean>
+</beans>

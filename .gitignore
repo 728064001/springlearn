@@ -7,3 +7,5 @@ version.ini
 contexts
 repositories.xml.zip
 tasks.xml.zip
+.settings
+.project
